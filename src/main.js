@@ -11,8 +11,8 @@ import VueLazyload from 'vue-lazyload'
  
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: 'dist/error.jpg',
-  loading: 'dist/loading.gif',
+  error: 'static/error.jpg',
+  loading: 'static/loading.gif',
   attempt: 1
 })
 import VFlow from 'v-flow';

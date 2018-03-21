@@ -2,7 +2,7 @@
  <div class="mydaughter">
    <ul v-flow=2>
      <li v-for="(img,index) in imgs" :key="index">
-        <img :src="img.src" :title="img.title" class="img">
+        <img v-lazy="img.src" :title="img.title" class="img">
         <p>this is my daughter</p>
      </li>
    </ul>
