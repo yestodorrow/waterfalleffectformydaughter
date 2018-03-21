@@ -1,0 +1,10 @@
+[
+{“title”: "mydaughter",“src”: "assets/1.jpg"},
+{“title”: "mydaughter",“src”: "assets/2.jpg"},
+{“title”: "mydaughter",“src”: "assets/3.jpg"},
+{“title”: "mydaughter",“src”: "assets/4.jpg"},
+{“title”: "mydaughter",“src”: "assets/5.jpg"},
+{“title”: "mydaughter",“src”: "assets/6.jpg"},
+{“title”: "mydaughter",“src”: "assets/7.jpg"},
+{“title”: "mydaughter",“src”: "assets/8.jpg"}
+]

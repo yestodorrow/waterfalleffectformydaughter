@@ -1,0 +1,25 @@
+﻿[{
+	"title": "mydaughter",
+	"src": "static/1.jpg"
+}, {
+	"title": "mydaughter",
+	"src": "static/2.jpg"
+}, {
+	"title": "mydaughter",
+	"src": "static/3.jpg"
+}, {
+	"title": "mydaughter",
+	"src": "static/4.jpg"
+}, {
+	"title": "mydaughter",
+	"src": "static/5.jpg"
+}, {
+	"title": "mydaughter",
+	"src": "static/6.jpg"
+}, {
+	"title": "mydaughter",
+	"src": "static/7.jpg"
+}, {
+	"title": "mydaughter",
+	"src": "static/8.jpg"
+}]
