@@ -34,6 +34,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style coped>
+h1{
+  font-size:1rem;
+}
 ul{
   list-style:none;
   width:10rem;
