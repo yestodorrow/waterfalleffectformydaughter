@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>this is the parent component</h1>
+    <h3>this is the parent component</h3>
     <mydaughter/>
   </div>
 </template>

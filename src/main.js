@@ -4,10 +4,13 @@ import Vue from 'vue'
 import App from './App'
 
 import http from 'axios'
-
+import 'normalize.css'
 // 引入懒加载
 
 import VueLazyload from 'vue-lazyload'
+
+
+
  
 Vue.use(VueLazyload, {
   preLoad: 1.3,
