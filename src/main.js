@@ -5,6 +5,16 @@ import App from './App'
 
 import http from 'axios'
 
+// 引入懒加载
+
+import VueLazyload from 'vue-lazyload'
+ 
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: 'dist/error.jpg',
+  loading: 'dist/loading.gif',
+  attempt: 1
+})
 import VFlow from 'v-flow';
 Vue.use(VFlow);
 
