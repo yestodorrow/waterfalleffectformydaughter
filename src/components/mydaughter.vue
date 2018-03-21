@@ -36,14 +36,15 @@ export default {
 <style coped>
 ul{
   list-style:none;
- 
+  width:10rem;
 }
 li{
-  list-style: none
-  
+  list-style: none;
+ 
+
 }
 img{
-  width:500px;
+  width:4.5rem;
   vertical-align: middle;
   border-radius:5px;
   box-shadow: 0  0 2px 2px #ddd;

@@ -11,12 +11,18 @@
   </body>
   <script>
       (function(doc,win){
-    var docEl=doc.documentElement;
-    var html=doc.querySelector("html");
-    var dpr=win.devicePixelRatio||1;
-    html.style.fontSize=docEl.clientWidth/10+"px";
-    html.setAttribute('data-dpr',dpr   )
-  })(document,windows)
+        var docEl=doc.documentElement;
+      var html=doc.querySelector("html");
+       fn=function(){
+      
+          var dpr=win.devicePixelRatio||1;
+          html.style.fontSize=docEl.clientWidth/10+"px";
+          html.setAttribute('data-dpr',dpr)
+        }
+        win.addEventListener("resize",fn);
+        win.addEventListener("DOMContentLoaded",fn)
+    
+  })(document,window)
 
   </script>
 </html>
