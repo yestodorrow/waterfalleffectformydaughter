@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {Waterfall, WaterfallItem} from 'vue2-waterfall';
+
 export default {
   name: 'mydaughter',
   data () {
@@ -27,7 +27,7 @@ export default {
     })
   },
   components:{
-    Waterfall, WaterfallItem
+    
   }
 }
 </script>
