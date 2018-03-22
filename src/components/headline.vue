@@ -1,7 +1,21 @@
 <template>
   <div class="headlines">
         <swiper :options="swiperOption">
-             <swiper-slide v-for="(headline,index) in headlines" :key="index">I'm Slide {{ headline }}</swiper-slide>
+             <swiper-slide >
+                 <div class="headline" >
+                    {{ headlines[0] }}
+                 </div>
+            </swiper-slide>
+             <swiper-slide >
+                 <div class="headline" >
+                    {{ headlines[1] }}
+                 </div>  
+            </swiper-slide>
+             <swiper-slide >
+                 <div class="headline" >
+                    {{ headlines[2] }}
+                 </div>
+            </swiper-slide>
         </swiper>
   </div>
 </template>
@@ -26,11 +40,8 @@ export default {
                 autoplay: true,
                 speed: 400,
                 loop:true,
-                grabCursor: true,
-                setWrapperSize: true,
-                autoHeight: true,
-                mousewheelControl: true,
-                observeParents: true,
+                direction: 'horizontal',
+                height: 50,
           }
       }
   },
@@ -42,11 +53,19 @@ export default {
 </script>
 <style coped>
 .headlines{
-    width:100%;
-    height:2rem;
+    width:10rem;
+    height:1rem;
+    line-height:1rem;
+}
+.headline{
+    font-size:.5rem;
 }
 div{
-    
+
+
+
+
+
 }
 </style>
 
