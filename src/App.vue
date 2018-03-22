@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <h3>this is the parent component</h3>
-    <mydaughter/>
+    <Headline/>
+    <Mydaughter/>
   </div>
 </template>
 
 <script>
 import Mydaughter from './components/mydaughter'
-
+import Headline from './components/headline'
 export default {
   name: 'App',
   components: {
-    Mydaughter
+    Mydaughter,Headline
   },
+  created:function(){
+    document.ontouchmove=function(e){
+      e.preventDefault()
+    }
+  }
 
 }
 </script>
