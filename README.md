@@ -19,7 +19,12 @@
 然后标题做了一个轮播，这里用的是awesome-swiper不过这个现在都到4了
 
 
-刚把下拉加载
+刚把下拉加载添加上，这个mint-ui有很多组件 其中infinite-scroll就不错，而且支持按需加载 
+
+这样首页加载的时候，js文件不至于过大
+
+
+下来做一下code spliting
 ## Build Setup
 
 ``` bash
