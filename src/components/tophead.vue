@@ -32,9 +32,9 @@ export default {
   data(){
       return{
           headlines:[
-              "this is headline 1",
-              "this is headline 2",
-              "this is headline 3" 
+              "This is my daughter's picture",
+              "This is my daughter's picture",
+              "This is my daughter's picture" 
           ],
           swiperOption:{
                 autoplay: true,
