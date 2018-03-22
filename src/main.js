@@ -10,6 +10,11 @@ import 'normalize.css'
 import VueLazyload from 'vue-lazyload'
 
 
+// 引入下拉加载
+import { InfiniteScroll } from 'mint-ui';
+
+Vue.use(InfiniteScroll);
+
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
  
 // // require styles

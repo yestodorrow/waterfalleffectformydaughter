@@ -36,7 +36,10 @@ export default {
   },
   methods:{
     loadMore(){
-
+      this.loading=true;
+      console.log("begin to load more");
+      console.log("loaded");
+      this.loading=false;
     }
   }
 }
