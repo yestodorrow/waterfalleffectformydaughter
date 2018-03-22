@@ -1,20 +1,20 @@
 <template>
   <div class="headlines">
         <swiper :options="swiperOption">
-             <swiper-slide >
-                 <div class="headline" >
+             <swiper-slide   class="headline headline1">
+                 
                     {{ headlines[0] }}
-                 </div>
+               
             </swiper-slide>
-             <swiper-slide >
-                 <div class="headline" >
+             <swiper-slide  class="headline headline2">
+               
                     {{ headlines[1] }}
-                 </div>  
+                  
             </swiper-slide>
-             <swiper-slide >
-                 <div class="headline" >
+             <swiper-slide class="headline headline3" >
+                
                     {{ headlines[2] }}
-                 </div>
+               
             </swiper-slide>
         </swiper>
   </div>
@@ -41,9 +41,18 @@ export default {
                 speed: 400,
                 loop:true,
                 direction: 'horizontal',
-                height: 50,
-          }
+            //     height: 50,
+            //     effect : 'coverflow',
+            //     slidesPerView: 2,
+            //      coverflowEffect: {
+            //     rotate: 10,
+            //     stretch: 2,
+            //     depth: 30,
+            //     modifier: 2,
+            //     slideShadows : true
+            // }
       }
+     }
   },
   components:{
     swiper,
@@ -52,17 +61,27 @@ export default {
 }
 </script>
 <style coped>
-.headlines{
-    width:10rem;
-    height:1rem;
-    line-height:1rem;
-}
+
 .headline{
     font-size:.5rem;
+    width:10rem;
+    height:2rem;
+    line-height:2rem;
 }
-div{
+.headline1{
+    background:yellow;
+}
 
 
+.headline2{
+    background:red;
+}
+.headline3{
+    background:green;
+}
+div.full{
+
+width:100%;
 
 
 
