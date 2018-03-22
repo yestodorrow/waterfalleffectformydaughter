@@ -1,5 +1,9 @@
 <template>
- <div class="mydaughter">
+ <div class="mydaughter"
+  v-infinite-scroll="loadMore"
+  infinite-scroll-disabled="loading"
+  infinite-scroll-distance="10">
+ 
    <ul v-flow=2>
      <li v-for="(img,index) in imgs" :key="index">
         <img v-lazy="img.src" :title="img.title" class="img">
@@ -15,7 +19,8 @@ export default {
   name: 'mydaughter',
   data () {
     return {
-      imgs:[]
+      imgs:[],
+      loading:false
     }
   },
   created:function(){
@@ -28,6 +33,11 @@ export default {
   },
   components:{
     
+  },
+  methods:{
+    loadMore(){
+
+    }
   }
 }
 </script>
@@ -59,6 +69,6 @@ p{
   margin:0;
 }
 .mydaughter{
-  mmargin:.2rem 0;
+  margin:.2rem 0;
 }
 </style>
