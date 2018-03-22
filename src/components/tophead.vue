@@ -62,12 +62,18 @@ export default {
 }
 </script>
 <style coped>
-
+.headlines{
+    width:10rem;
+}
+ul{
+    width:10rem;
+    padding-left:0;
+}
 .headline{
     font-size:.5rem;
     width:10rem;
-    height:2rem;
-    line-height:2rem;
+    height:1.2rem;
+    line-height:1.2rem;
 }
 .headline1{
     background:yellow;

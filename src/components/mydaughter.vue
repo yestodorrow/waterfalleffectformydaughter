@@ -54,5 +54,11 @@ img{
 }
 p{
   font-size:.5rem;
+  height:.8rem;
+  line-height:.8rem;
+  margin:0;
+}
+.mydaughter{
+  mmargin:.2rem 0;
 }
 </style>
