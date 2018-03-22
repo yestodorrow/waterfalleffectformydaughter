@@ -1,17 +1,17 @@
 <template>
   <div id="app"  @touchmove.prevent >
-    <Headline/>
+    <Top/>
     <Mydaughter/>
   </div>
 </template>
 
 <script>
 import Mydaughter from './components/mydaughter'
-import Headline from './components/headline'
+import Top from './components/tophead'
 export default {
   name: 'App',
   components: {
-    Mydaughter,Headline
+    Mydaughter,Top
   },
   created:function(){
     document.ontouchmove=function(e){

@@ -41,6 +41,7 @@ export default {
                 speed: 400,
                 loop:true,
                 direction: 'horizontal',
+                width:500
             //     height: 50,
             //     effect : 'coverflow',
             //     slidesPerView: 2,
