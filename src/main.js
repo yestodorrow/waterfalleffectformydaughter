@@ -59,7 +59,6 @@ const store=new Vuex.Store({
       http.get("./static/daughter.txt").then(response=>{
         console.log(1);
         context.commit("GETPIC",response.data);
-        console.log(data);
       }).catch(err=>{
         console.log(err)
       })
