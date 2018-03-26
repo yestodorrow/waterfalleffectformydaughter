@@ -15,8 +15,8 @@
 
 
 
-图片比较大  
-  
+图片比较大
+
 做了一个优化，在3G或者更慢的网络情况下，显示给用户正在加载的图像，预加载三张图片
 
 随着用户下滑，会加载后面的图片
@@ -27,7 +27,7 @@
 然后标题做了一个轮播，这里用的是awesome-swiper不过这个现在都到4了
 
 
-刚把下拉加载添加上，这个mint-ui有很多组件 其中infinite-scroll就不错，而且支持按需加载 
+刚把下拉加载添加上，这个mint-ui有很多组件 其中infinite-scroll就不错，而且支持按需加载
 
 这样首页加载的时候，js文件不至于过大
 
@@ -37,11 +37,29 @@
 
 说一说瀑布流吧
 
-这里用的是v-flow的插件  
+这里用的是v-flow的插件
 
 因为最近上线用了，发现一个很大的问题，果断弃了。
 
 问题是：如果是v-for 渲染后的数据  这里还是需要重绘，虽然$tick也不能解决
+
+
+
+这次做了一个更新，引入了vuex，
+在main.js 新建一个变量 store
+变量中存在 state  state中存在着变量
+
+actions 动作，
+在子组件中可以派发dispatch（行为，参数），然后会在这里执行；比如闺女展示页dispatch(getPics),到了actions中，getPics(context,data){
+  这里请求数据，将请求的数据
+  context.commit("对应mutations中的GETPICS")
+}
+
+mutations
+  GETPICS(state,data){
+  state.pics=data
+  }
+
 ## Build Setup
 
 ``` bash
