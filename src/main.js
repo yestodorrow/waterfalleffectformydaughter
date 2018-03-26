@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 
 import http from 'axios'
+
+
+import Vuex from 'vuex'
 import 'normalize.css'
 // 引入懒加载
 
@@ -15,15 +18,17 @@ import { InfiniteScroll } from 'mint-ui';
 
 Vue.use(InfiniteScroll);
 
+
+Vue.use(Vuex)
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
- 
+
 // // require styles
 // import 'swiper/dist/css/swiper.css'
- 
+
 // Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 
- 
+
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: 'static/error.jpg',
@@ -33,7 +38,34 @@ Vue.use(VueLazyload, {
 import VFlow from 'v-flow';
 Vue.use(VFlow);
 
-Vue.prototype.$http=http
+
+
+
+
+const store=new Vuex.Store({
+  state:{
+    pics:[]
+  },
+  getters:{},
+  mutations:{
+    GETPIC(state,data){
+      console.log(data);
+        state.pics=data
+    },
+
+  },
+  actions:{
+    getPic(context,type){
+      http.get("./static/daughter.txt").then(response=>{
+        console.log(1);
+        context.commit("GETPIC",response.data);
+        console.log(data);
+      }).catch(err=>{
+        console.log(err)
+      })
+    }
+  }
+})
 
 Vue.config.productionTip = false
 
@@ -41,5 +73,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })

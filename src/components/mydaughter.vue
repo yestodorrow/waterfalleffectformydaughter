@@ -3,9 +3,9 @@
   v-infinite-scroll="loadMore"
   infinite-scroll-disabled="loading"
   infinite-scroll-distance="10">
- 
+
    <ul v-flow=2>
-     <li v-for="(img,index) in imgs" :key="index">
+     <li v-for="(img,index) in pics" :key="index">
         <img v-lazy="img.src" :title="img.title" class="img">
         <p>this is my daughter</p>
      </li>
@@ -14,25 +14,21 @@
 </template>
 
 <script>
-
+  import {mapState } from 'vuex'
 export default {
   name: 'mydaughter',
   data () {
     return {
-      imgs:[],
+
       loading:false
     }
   },
-  created:function(){
-    this.$http.get("./static/daughter.txt").then(data=>{
-      this.imgs=data.data;
-      console.log(this.imgs)
-    }).catch(err=>{
-      console.log(err)
-    })
+  created(){
+      console.log(this.$store.state.pics);
+    this.$store.dispatch("getPic",0)
   },
   components:{
-    
+
   },
   methods:{
     loadMore(){
@@ -41,7 +37,13 @@ export default {
       console.log("loaded");
       this.loading=false;
     }
-  }
+  },
+  computed:{
+      pics(){
+          return this.$store.state.pics;
+      }
+  },
+
 }
 </script>
 
@@ -56,7 +58,7 @@ ul{
 }
 li{
   list-style: none;
- 
+
 
 }
 img{
