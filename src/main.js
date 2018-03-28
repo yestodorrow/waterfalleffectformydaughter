@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 
+import VueRouter from 'vue-router'
+
 import http from 'axios'
 
 
@@ -19,7 +21,11 @@ import { InfiniteScroll } from 'mint-ui';
 Vue.use(InfiniteScroll);
 
 
+
 Vue.use(Vuex)
+
+
+Vue.use(VueRouter)
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 // // require styles
@@ -39,8 +45,14 @@ import VFlow from 'v-flow';
 Vue.use(VFlow);
 
 
+const routes = [
+  { path: '/', component: App },
+]
 
 
+const router = new VueRouter({
+  routes // routes: routes 的简写
+})
 
 const store=new Vuex.Store({
   state:{
@@ -49,7 +61,6 @@ const store=new Vuex.Store({
   getters:{},
   mutations:{
     GETPIC(state,data){
-      console.log(data);
         state.pics=data
     },
 
